@@ -34,7 +34,7 @@ docker images
 # Step 4 
 
 ```bash
-docker run -d --name mysql_container --network two-tier-network -e MYSQL_ROOT_PASSWORD=123 -e MYSQL_DATABASE=deest
+docker run -d --name mysql_container --network two-tier-network -e MYSQL_ROOT_PASSWORD=123 -e MYSQL_DATABASE=devops
 docker ps
 ```
 
