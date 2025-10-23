@@ -9,7 +9,7 @@ git clone https://github.com/muhammadaliazhar/Docker-Network.git
 ```
 
 
-# Step 2
+# Step 2 --- Create a Custom bridge Network
 
 ```bash
 docker network ls
@@ -19,7 +19,7 @@ docker network create two-tier-network
 
 
 
-# Step 3
+# Step 3  --- Create image of flask application
 
 ```bash
  cd Docker-Network
@@ -31,14 +31,14 @@ docker images
 
 
 
-# Step 4 
+# Step 4 --- Run mysql container using custom bridge network
 
 ```bash
 docker run -d --name mysql_container --network two-tier-network -e MYSQL_ROOT_PASSWORD=123 -e MYSQL_DATABASE=devops
 docker ps
 ```
 
-# Step 5 
+# Step 5 --- Run Flask app container using same custom bridge network
 
 ```bash
 docker run -d --name two-tier-container -p 5000:5000 --network two-tier-network -e MYSQL_HOST=mysql_container -e MYSQL_PASSWORD=123 -e MYSQL_DB=devops two-tier-app
@@ -47,7 +47,7 @@ docker ps
 <img width="1669" height="184" alt="image" src="https://github.com/user-attachments/assets/acd3842f-335b-46df-9829-250acfa3ffaa" />
 
 
-# Step 6 
+# Step 6 --- Inspect conatiners in your custom bridge network
 
 ```bash
 docker network inspect two-tier-network
