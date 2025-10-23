@@ -56,3 +56,20 @@ docker network inspect two-tier-network
 
 Open Port 5000 in firewall rule
 
+
+# Stap 7 --- Access application on browser  public-ip:5000
+
+<img width="1152" height="615" alt="image" src="https://github.com/user-attachments/assets/bfb6ecd0-93ed-4955-84a7-a14cbba02fff" />
+
+
+# Step 8 --- Check database enteries in db table
+
+```bash
+docker exec -it <mysql-container-id> /bin/bash
+mysql -u root -p
+```
+
+<img width="949" height="801" alt="image" src="https://github.com/user-attachments/assets/2bcc3098-df43-4c86-9e48-ea204bfda36d" />
+
+
+
