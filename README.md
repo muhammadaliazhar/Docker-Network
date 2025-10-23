@@ -13,7 +13,7 @@ git clone https://github.com/muhammadaliazhar/Docker-Network.git
 
 ```bash
 docker network ls
-docker network create mynetwork
+docker network create two-tier-network
 ```
 <img width="822" height="214" alt="image" src="https://github.com/user-attachments/assets/c1280205-fd72-4fbd-b205-7c55ac95c999" />
 
